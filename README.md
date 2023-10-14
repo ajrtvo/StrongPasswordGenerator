@@ -1,4 +1,4 @@
-# Strong Password Generator and Credential Manager
+# Strong Password Generator and Secured Credential Manager
 A Python application that generates strong password combinations and securely stores them in an encrypted file. With this tool, you can create complex, unique passwords for your accounts, and access them when needed. This application is designed to prioritize security and ease of use. Say goodbye to weak passwords and the hassle of remembering them. 
 
 # Features
