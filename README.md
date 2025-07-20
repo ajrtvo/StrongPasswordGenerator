@@ -35,7 +35,3 @@ Creating strong and secure passwords is simple with this application:
 
 # Security
 Your credentials are securely stored locally using industry-standard encryption and hashing methods so your sensitive information remains protected. 
-
-# Contact
-Have questions or suggestions? Feel free to open an issue or contact us. We value your input and are here to assist you.
-Enjoy generating and managing strong passwords with ease!
