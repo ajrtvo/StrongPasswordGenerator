@@ -5,7 +5,8 @@ trigger:
 
 variables:
   githubRepo: 'https://github.com/ajrtvo/StrongPasswordGenerator'
-  githubPAT: '$(githubPAT)' # store securely in pipeline secrets
+  # githubPAT should be stored as a secret pipeline variable
+  githubPAT: '$(githubPAT)' 
   adoRepoDir: '$(Build.SourcesDirectory)'
 
 stages:
@@ -14,17 +15,9 @@ stages:
       - job: PushToGitHub
         steps:
           - script: |
-              # Clone the Azure DevOps repo
               git clone --branch main $(Build.Repository.Uri) temp_ado_repo
               cd temp_ado_repo
-              
-              # Push to GitHub
-              git remote add github $(githubRepo)
+              # Add GitHub remote with PAT for authentication
+              git remote add github https://$(githubPAT)@github.com/ajrtvo/StrongPasswordGenerator.git
               git push github main --force
             displayName: 'Sync Azure DevOps to GitHub'
-            env:
-              GIT_ASKPASS: 'echo'
-              GIT_TERMINAL_PROMPT: '0'
-              # Configure credentials for GitHub
-              GIT_USERNAME: 'ajrtvo'
-              GIT_PASSWORD: '$(githubPAT)'
