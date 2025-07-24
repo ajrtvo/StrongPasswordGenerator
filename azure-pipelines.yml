@@ -1,0 +1,30 @@
+trigger:
+  branches:
+    include:
+      - main
+
+variables:
+  githubRepo: 'https://github.com/yourusername/yourrepo.git'
+  githubPAT: '$(githubPAT)' # store securely in pipeline secrets
+  adoRepoDir: '$(Build.SourcesDirectory)'
+
+stages:
+  - stage: Sync
+    jobs:
+      - job: PushToGitHub
+        steps:
+          - script: |
+              # Clone the Azure DevOps repo
+              git clone --branch main $(Build.Repository.Uri) temp_ado_repo
+              cd temp_ado_repo
+              
+              # Push to GitHub
+              git remote add github $(githubRepo)
+              git push github main --force
+            displayName: 'Sync Azure DevOps to GitHub'
+            env:
+              GIT_ASKPASS: 'echo'
+              GIT_TERMINAL_PROMPT: '0'
+              # Configure credentials for GitHub
+              GIT_USERNAME: 'yourgithubusername'
+              GIT_PASSWORD: '$(githubPAT)'
