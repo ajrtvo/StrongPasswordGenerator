@@ -8,7 +8,7 @@ A Python application that generates strong password combinations and securely st
 
 # Getting Started
 # First Run
-1. Launch the Application: Double-click SecuredCredentialManager.exe to run the application.
+1. Launch the Application: Open SecuredCredentialManager.exe to run the application.
 2. Generate a New Encryption File: During the first run, the application will prompt you to generate a new encryption file. This file is essential for securing your credentials. 
 3. Securing the Eryption File: It's crucial to keep your encryption file in a secure location. This file is your key to accessing your stored credentials. Without it, your data is unreadable.
    
