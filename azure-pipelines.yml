@@ -4,7 +4,7 @@ trigger:
       - main
 
 pool:
-  agent: Azure Pipelines
+  agent: AJent
 
 variables:
   githubRepo: 'https://github.com/ajrtvo/StrongPasswordGenerator'
