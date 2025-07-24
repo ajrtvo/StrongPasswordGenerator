@@ -4,7 +4,6 @@ A Python application that generates strong password combinations and securely st
 # Features
 - Strong Password Generator: Create complex and secure passwords based on user custom settings.<br>
 - Credential Manager: Store and manage passwords associated with your accounts securely.<br>
-- Cross-platform: Works on Windows, macOS, and Linux.<br>
 - Command-line Interface: User-friendly CLI for easy interaction.<br>
 
 # Getting Started
