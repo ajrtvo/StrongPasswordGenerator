@@ -29,5 +29,5 @@ stages:
               GIT_ASKPASS: 'echo'
               GIT_TERMINAL_PROMPT: '0'
               # Configure credentials for GitHub
-              GIT_USERNAME: 'aldrinjohnrativo@gmail.com'
+              GIT_USERNAME: '$(githubUsername)'
               GIT_PASSWORD: '$(githubPAT)'
